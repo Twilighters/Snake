@@ -52,10 +52,10 @@ namespace Snake
             }
         }
 
-        public void Clear()
-        {
-            sym = ' ';
-            Draw();
+
+
+        public bool IsHit(Point p) {
+            return p.x == this.x && p.y == this.y;
         }
 
         public void Draw()
@@ -63,6 +63,13 @@ namespace Snake
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
         public override string ToString()
         {
             return x+","+y+","+sym;
