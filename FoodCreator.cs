@@ -19,7 +19,7 @@ namespace Snake
             this.mapHeight = mapHeight;
             this.sym = sym;
         }
-
+        //Создает еду в пределах поля с отступом 2
         public Point CreateFood() {
             int x = random.Next(2, mapWidht - 2);
             int y = random.Next(2, mapHeight - 2);
