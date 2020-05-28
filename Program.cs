@@ -11,12 +11,13 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            //Задает размер окна
             Console.SetBufferSize(80,25);
-
+            //Инициализирует стены
             Walls walls = new Walls(80, 25);
             walls.Draw();
 
-            //Paint Point
+            //Рисует точку старта для змейки
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
@@ -27,7 +28,7 @@ namespace Snake
             food.Draw();
 
 
-
+            //игровой процесс
             while (true)
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
